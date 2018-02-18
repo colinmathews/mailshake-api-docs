@@ -1968,6 +1968,7 @@ handler.unsubscribe(targetUrl)
   <span class="attr">"id"</span>: <span class="number">1</span>,
   <span class="attr">"title"</span>: <span class="string">"My campaign"</span>,
   <span class="attr">"created"</span>: <span class="string">"2017-08-19T02:31:22.218Z"</span>,
+  <span class="attr">"archived"</span>: <span class="literal">null</span>,
   <span class="attr">"messages"</span>: [
     {
       <span class="attr">"object"</span>: <span class="string">"message"</span>,
@@ -2008,6 +2009,21 @@ handler.unsubscribe(targetUrl)
 }
 </code></pre>
 <p>A Mailshake campaign is the container for a sequence of messages and the recipients to whom they’ll be sent.</p>
+<p><strong>Notable fields:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>archived</td>
+<td>Will be set to a date if this campaign is archived. Archived campaigns must be unarchived via the web interface before they can be fully interacted with.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="Message"><a href="#Message" class="headerlink" title="Message"></a>Message</h2><pre><code class="json highlight">{
   <span class="attr">"object"</span>: <span class="string">"message"</span>,
   <span class="attr">"id"</span>: <span class="number">423</span>,
