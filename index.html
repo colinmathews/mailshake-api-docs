@@ -404,7 +404,7 @@ curl "https://api.mailshake.com/2017-04-01/me" \
 </tr>
 </tbody>
 </table>
-<h2 id="ExportStatus"><a href="#ExportStatus" class="headerlink" title="ExportStatus"></a>ExportStatus</h2><pre><code class="javascript highlight">mailshake.recipients.exportStatus({
+<h2 id="ExportStatus"><a href="#ExportStatus" class="headerlink" title="ExportStatus"></a>ExportStatus</h2><pre><code class="javascript highlight">mailshake.campaigns.exportStatus({
   statusID: <span class="number">1</span>
 })
   .then(<span class="function"><span class="params">result</span> =&gt;</span> {
@@ -414,7 +414,7 @@ curl "https://api.mailshake.com/2017-04-01/me" \
     <span class="built_in">console</span>.error(<span class="string">`<span class="subst">${err.code}</span>: <span class="subst">${err.message}</span>`</span>);
   });
 </code></pre>
-<pre><code class="shell highlight">curl &quot;https://api.mailshake.com/2017-04-01/recipients/export-status&quot; \
+<pre><code class="shell highlight">curl &quot;https://api.mailshake.com/2017-04-01/campaigns/export-status&quot; \
   -u &quot;my-api-key:&quot; \
   -d statusID=1
 </code></pre>

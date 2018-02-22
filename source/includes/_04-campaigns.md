@@ -155,7 +155,7 @@ timezone | UTC | No | The timezone that dates in the export should be based in.
 ## ExportStatus
 
 ```javascript
-mailshake.recipients.exportStatus({
+mailshake.campaigns.exportStatus({
   statusID: 1
 })
   .then(result => {
@@ -167,7 +167,7 @@ mailshake.recipients.exportStatus({
 ```
 
 ```shell
-curl "https://api.mailshake.com/2017-04-01/recipients/export-status" \
+curl "https://api.mailshake.com/2017-04-01/campaigns/export-status" \
   -u "my-api-key:" \
   -d statusID=1
 ```
