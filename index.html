@@ -387,20 +387,42 @@ curl "https://api.mailshake.com/2017-04-01/me" \
 <tr>
 <td>campaignIDs</td>
 <td></td>
-<td>Yes</td>
-<td>An array of campaign IDs to export.</td>
+<td>Yes*</td>
+<td>An array of campaign IDs to export. <aside class="notice">Not required for <code>unsubscribes</code> export.</aside></td>
 </tr>
 <tr>
 <td>exportType</td>
 <td></td>
 <td>Yes</td>
-<td>The type of export to perform. <code>simple</code> creates a recipient-based export listing each recipient (per campaign) in a single row. <code>show-each-message</code> creates an export based on sent messages where every sent email is listed in a single row.</td>
+<td>The type of export to perform (see below).</td>
 </tr>
 <tr>
 <td>timezone</td>
 <td>UTC</td>
 <td>No</td>
 <td>The timezone that dates in the export should be based in.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Export-types"><a href="#Export-types" class="headerlink" title="Export types"></a>Export types</h3><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>simple</td>
+<td>Recipient-based export, listing each recipient (per campaign) on a single row.</td>
+</tr>
+<tr>
+<td><div>show-each-message</div></td>
+<td>Export based on sent messages, listing every sent email and related stats on a single row.</td>
+</tr>
+<tr>
+<td>unsubscribes</td>
+<td>An export of all the unsubscribed email addresses for your team.</td>
 </tr>
 </tbody>
 </table>

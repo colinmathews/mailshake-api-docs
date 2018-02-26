@@ -148,9 +148,17 @@ Asynchronously starts an export of one or more campaigns to CSV format. All camp
 
 Parameter | Default | Required | Description
 --------- | ------- | -----------
-campaignIDs |  | Yes | An array of campaign IDs to export.
-exportType |  | Yes | The type of export to perform. `simple` creates a recipient-based export listing each recipient (per campaign) in a single row. `show-each-message` creates an export based on sent messages where every sent email is listed in a single row.
+campaignIDs |  | Yes* | An array of campaign IDs to export. <aside class="notice">Not required for `unsubscribes` export.</aside>
+exportType |  | Yes | The type of export to perform (see below).
 timezone | UTC | No | The timezone that dates in the export should be based in.
+
+### Export types
+
+Type | Description
+--------- | -----------
+simple | Recipient-based export, listing each recipient (per campaign) on a single row.
+<div>show-each-message</div> | Export based on sent messages, listing every sent email and related stats on a single row.
+unsubscribes | An export of all the unsubscribed email addresses for your team.
 
 ## ExportStatus
 
